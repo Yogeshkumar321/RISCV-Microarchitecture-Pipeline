@@ -317,7 +317,9 @@ This crucial unit is responsible for detecting data hazards (when an instruction
 - `ForwardAE [1:0], ForwardBE [1:0]`: 2-bit forwarding control signals for the ALU's A and B inputs in the Execute stage
 
 **Forwarding Logic:**
-*[Insert PNG image of the Hazard Unit Condition Table from the documentation (e.g., from Page 51, Table "Mux control Source Explanation" and Page 52, "Condition for Data Hazard" section) here]*
+
+![Forwarding Logic ](./A_digital_diagram_displays_the_bit_allocation_and_.png)
+
 
 ## 4. Instruction Formats Supported
 
