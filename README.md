@@ -199,8 +199,9 @@ The Control Unit is the brain of the processor, generating all necessary control
 
 This decoder is responsible for generating most of the primary control signals based on the opcode. It also determines a 2-bit ALUOp signal, which provides a high-level command to the ALU_Decoder.
 
-**Example Mappings:**
-*[Insert PNG image of the Main Decoder truth table / example mappings from the documentation (e.g., from Page 11, Table "Instruction Op Reg Write ImmSrc ALUSrc MemWrite ResultSrc Branch ALUOp") here]*
+**MAIN decoder table:**
+![MAIN decoder mapping ](Resources/MAINdecodertable.png)
+
 
 #### ALU Decoder (`ALU_Decoder.v`):
 
@@ -211,7 +212,9 @@ This decoder is responsible for generating most of the primary control signals b
 This decoder uses the ALUOp signal along with the instruction's funct3 and funct7 fields (and op[5]) to compute the precise ALUControl signal required by the ALU.
 
 **ALUOp Meanings & ALUControl Table:**
-*[Insert PNG image of the ALU Decoder truth table / ALUOp meanings from the documentation (e.g., from Page 11, Table "ALUOP Meaning" and Page 12, Table "ALUOP funct3 {ops, funct75) ALUControl Instruction") here]*
+![ ALU operation control table ](Resources/ALUoperationcontroltable.png)
+
+![ ALU op control table ](Resources/ALUopcontroltable.png)
 
 ### Data Memory (`Data_Memory.v`) 📦
 
@@ -318,8 +321,9 @@ This crucial unit is responsible for detecting data hazards (when an instruction
 
 **Forwarding Logic:**
 
-![Forwarding Logic ](./A_digital_diagram_displays_the_bit_allocation_and_.png)
+![Forwarding Logic ](Resources/Datahazardcontroltable.png)
 
+![Forwarding MUX table ](Resources/MUXcontroltable.png)
 
 ## 4. Instruction Formats Supported
 
@@ -336,7 +340,7 @@ These instructions operate exclusively on three registers: two source (rs1, rs2)
 
 **Examples:** ADD, SUB, SLL, SLT, SLTU, XOR, SRL, SRA, OR, AND
 
-*[Insert PNG image of the R-Type Instruction Format table from the documentation (e.g., from Page 8, Table "funct7 rs2 rs1 funct3 rd op") here]*
+![R-type instructions](Resources/Itypeinsructions.png)
 
 ### I-Type Instructions: (Immediate-type) 📊
 
@@ -350,7 +354,7 @@ I-type instructions utilize two register operands (rs1, rd) and a 12-bit immedia
 
 **Examples:** LB, LH, LW, LBU, LHU, ADDI, SLTI, SLTIU, XORI, ORI, ANDI, SLLI, SRLI, SRAI
 
-*[Insert PNG image of the I-Type Instruction Format table from the documentation (e.g., from Page 9, Table "imm11:0 rs1 funct3 rd op") here]*
+![I-type instructions](Resources/Itypeinsructions.png)
 
 ### S-Type Instructions: (Store-type) 📦
 
@@ -364,7 +368,7 @@ S-type instructions are designed for memory store operations, using two register
 
 **Examples:** SB, SH, SW
 
-*[Insert PNG image of the S-Type Instruction Format table from the documentation (e.g., from Page 9, Table "imm11:5 rs2 rs1 funct3 imm4:0 op") here]*
+![I-type instructions](Resources/Itypeinsructions.png)
 
 ### B-Type Instructions: (Branch-type) ➡️
 
@@ -377,7 +381,8 @@ This format is exclusively used by branch instructions, operating on two registe
 
 **Examples:** BEQ, BNE, BLT, BGE, BLTU, BGEU
 
-*[Insert PNG image of the B-Type Instruction Format table from the documentation (e.g., from Page 10, Table "imm12,10:5 rs2 rs1 funct3 imm4:1,11 op") here]*
+![B-type instructions](Resources/Btypeinstructions.png)
+
 
 ## 5. Signal Conventions 🚥
 
