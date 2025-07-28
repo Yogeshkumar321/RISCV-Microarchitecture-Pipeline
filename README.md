@@ -340,7 +340,7 @@ These instructions operate exclusively on three registers: two source (rs1, rs2)
 
 **Examples:** ADD, SUB, SLL, SLT, SLTU, XOR, SRL, SRA, OR, AND
 
-![R-type instructions](Resources/Itypeinsructions.png)
+![R-type instructions](Resources/Rtypeinstructions.png)
 
 ### I-Type Instructions: (Immediate-type) 📊
 
@@ -368,7 +368,7 @@ S-type instructions are designed for memory store operations, using two register
 
 **Examples:** SB, SH, SW
 
-![I-type instructions](Resources/Itypeinsructions.png)
+![S-type instructions](Resources/Stypeinstructions.png)
 
 ### B-Type Instructions: (Branch-type) ➡️
 
