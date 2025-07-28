@@ -200,6 +200,8 @@ The Control Unit is the brain of the processor, generating all necessary control
 This decoder is responsible for generating most of the primary control signals based on the opcode. It also determines a 2-bit ALUOp signal, which provides a high-level command to the ALU_Decoder.
 
 **MAIN decoder table:**
+
+**MAIN decoder mapping :**
 ![MAIN decoder mapping ](Resources/MAINdecodertable.png)
 
 
@@ -212,8 +214,11 @@ This decoder is responsible for generating most of the primary control signals b
 This decoder uses the ALUOp signal along with the instruction's funct3 and funct7 fields (and op[5]) to compute the precise ALUControl signal required by the ALU.
 
 **ALUOp Meanings & ALUControl Table:**
+
+**ALU operation control table :**
 ![ ALU operation control table ](Resources/ALUoperationcontroltable.png)
 
+**ALU op control table  :**
 ![ ALU op control table ](Resources/ALUopcontroltable.png)
 
 ### Data Memory (`Data_Memory.v`) 📦
@@ -323,6 +328,8 @@ This crucial unit is responsible for detecting data hazards (when an instruction
 
 ![Forwarding Logic ](Resources/Datahazardcontroltable.png)
 
+
+**Forwarding MUX table:**
 ![Forwarding MUX table ](Resources/MUXcontroltable.png)
 
 ## 4. Instruction Formats Supported
