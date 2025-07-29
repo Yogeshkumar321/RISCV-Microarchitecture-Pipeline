@@ -18,7 +18,7 @@ module tb();
     initial begin
         $dumpfile("dump.vcd");
         $dumpvars(0);
-    end
-
+    end 
+    
     Pipeline_top dut (.clk(clk), .rst(rst));
 endmodule
