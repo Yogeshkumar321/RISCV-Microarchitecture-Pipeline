@@ -447,7 +447,7 @@ This will launch GTKWave with the VCD file loaded and the signals pre-arranged a
 
 After running the simulation, you can analyze the `dump.vcd` file using GTKWave. Below you can insert a screenshot of the waveform output and provide an observational description of the key signal behaviors during the simulation.
 
-*[Insert PNG image of the waveform output from GTKWave here]*
+![output waveform](Resources/outputwaveform.png)
 
 ### Observational Description:
 
